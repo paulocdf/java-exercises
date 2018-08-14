@@ -1,5 +1,8 @@
 package pt.home.application;
 
+import pt.home.business.MyHashMap;
+import pt.home.business.impl.MyHashMapImpl;
+
 /*
  * Exercício: Construção de uma hashmap caseira
  * 	
@@ -12,7 +15,10 @@ package pt.home.application;
 public class Application {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		MyHashMap<Integer, Integer> customMap = new MyHashMapImpl<>();
+		
+		customMap.put(3, 300);
+		
 
 	}
 

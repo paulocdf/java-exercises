@@ -1,19 +1,28 @@
 package pt.home.business;
 
-/*
- * Hashmap: An object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value.
- * 
- * Collision: Habitualmente é com "chaining" que se resolvem. Ou seja, usa-se uma lista ligada para guardar os valores cujas chaves tiveram 
- * o mesmo hashcode. Estes valores são colocados na cabeça da lista.
- */
+public interface MyHashMap<K, V> {
 
-/*
- *This is a little off topic, but the load factor is by default 75%. Also, off topic again, 
- *this is why you want to set an initial capacity that is reflected with the number of total elements you think will be in the map,
- * because it gets increasingly expensive to refactor the map as the number of elements stored gets larger and larger.
- * You want to set the initial capacity just over the maximum number of elements you think will be stored to alleviate this cost later on. 
- */
-public class MyHashMap<K, V> {
+	public boolean containsKey(Object key);
 
-	
+	public boolean containsValue(Object value);
+
+	/**
+	 * Returns the value to which the specified key is mapped, or null if this map
+	 * contains no mapping for the key.
+	 * 
+	 * @param key
+	 *            the key of the hashmap
+	 * @return the object associated to the hashmap key
+	 */
+	public V get(Object key);
+
+	/**
+	 * Associates the specified value with the specified key in this map (optional
+	 * operation).
+	 * 
+	 * @param key
+	 * @param value
+	 */
+	public K put(K key, V value);
+
 }
