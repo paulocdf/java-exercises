@@ -19,6 +19,8 @@ import pt.home.business.MyHashMap;
  * because it gets increasingly expensive to refactor the map as the number of elements stored gets larger and larger.
  * You want to set the initial capacity just over the maximum number of elements you think will be stored to alleviate this cost later on. 
  */
+
+// TODO: Alterar nome Entry para Bucket
 public class MyHashMapImpl<K, V> implements MyHashMap<K, V> {
 
 	private static final int INITIAL_CAPACITY = 10;
